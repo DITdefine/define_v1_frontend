@@ -20,7 +20,7 @@ export const reset = css`
         /* 공용으로 사용할 color 정해지면 작성*/
     }
 
-    h1, p {
+    h1, h2, h3, p {
         margin: 0;
     }
 

@@ -9,17 +9,21 @@ export const mainlayout = css`
 
 export const sidebar = css`
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   width: 250px;
-  height: 100vh;
-  background-color: #ffffff;
+  height: 100%;
+  background-color: #F5F5F5;
   box-shadow: 2px 0 8px rgba(0,0,0,0.15);
   z-index: 10;
 
 `
 
 export const maincontnet = css`
-    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    width: 1670px;
+    overflow: hidden;
     background-color: #F3F4F6;
 `
 export const parkinglog = css`
@@ -36,36 +40,37 @@ export const parkinglog_text = css`
 `
 
 export const parkinglog_text2 = css`
-    color: #C4C6CC;
-    font-size: 16px;
-    font-weight: 600;
+    color: #212121;
+    font-size: 20px;
+    font-weight: 800;
 `
 export const buttons = css`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
     flex: 1;
     min-height: 0;
     button{
         padding: 0px;
     }
-    
 `
 export const button_icon = (active) => css`
   display: flex;
   padding: 20px 42px;
   align-items: center;
-  gap: 5px;
   background-color: ${active ? '#0083c9' : 'transparent'};
-
+  gap: 5px;
   &:hover {
-    background-color: ${active ? '' : '#e6f2fb'}; /* active면 조금 더 진한 색으로 hover */
+    background-color: ${active ? '#006fa8' : '#e6f2fb'};
+  }
+  &:active {
+    background-color: ${active ? '#005b87' : '#cce6f7'}; /* 클릭 눌렀을 때 */
   }
 
   p {
     font-size: 20px;
     font-weight: bold;
     white-space: nowrap;
-    color: ${active ? '#fff' : '#000'};
+    color: ${active ? '#f5f5f5' : '#0c0c0c'};
   }
 `;
